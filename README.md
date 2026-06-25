@@ -1,10 +1,10 @@
-# PeerVault
+# Vault
 
-A distributed peer-to-peer file storage system built in Go with encryption, automatic replication, and comprehensive monitoring. PeerVault is a production-ready, decentralized file storage system designed for secure and resilient data distribution across peer-to-peer networks. Built entirely in Go with zero external dependencies, it provides enterprise-grade features in a lightweight, easy-to-deploy package.
+A distributed peer-to-peer file storage system built in Go with encryption, automatic replication, and comprehensive monitoring. Vault is a production-ready, decentralized file storage system designed for secure and resilient data distribution across peer-to-peer networks. Built entirely in Go with zero external dependencies, it provides enterprise-grade features in a lightweight, easy-to-deploy package.
 
-### What is PeerVault?
+### What is Vault?
 
-At its core, PeerVault creates a distributed storage network where files are automatically replicated across multiple nodes. When you store a file on any node, it's immediately encrypted with AES-256 encryption and propagated to all connected peers. This ensures your data remains available even if individual nodes go offline or fail.
+At its core, Vault creates a distributed storage network where files are automatically replicated across multiple nodes. When you store a file on any node, it's immediately encrypted with AES-256 encryption and propagated to all connected peers. This ensures your data remains available even if individual nodes go offline or fail.
 
 ### How It Works
 
@@ -16,7 +16,7 @@ At its core, PeerVault creates a distributed storage network where files are aut
 
 ### Use Cases
 
-PeerVault is ideal for scenarios requiring distributed, fault-tolerant storage:
+Vault is ideal for scenarios requiring distributed, fault-tolerant storage:
 
 - **Distributed Backup Systems**: Replicate critical data across multiple geographic locations with automatic integrity verification
 - **Edge Computing**: Store data close to edge nodes for low-latency access with built-in monitoring
@@ -49,7 +49,7 @@ PeerVault is ideal for scenarios requiring distributed, fault-tolerant storage:
 
 - **Garbage Collection**: Automated background process runs hourly to verify file integrity by recalculating SHA-256 hashes. Automatically removes corrupted files and orphaned data, maintaining storage health without manual intervention.
 
-- **Streaming I/O**: Memory-efficient architecture uses streaming for all file operations. Transfer files of any size while using only ~32KB of memory per operation, making PeerVault suitable for resource-constrained environments.
+- **Streaming I/O**: Memory-efficient architecture uses streaming for all file operations. Transfer files of any size while using only ~32KB of memory per operation, making Vault suitable for resource-constrained environments.
 
 ### Monitoring & Observability
 
@@ -93,7 +93,7 @@ PeerVault> get myfile.txt
 
 ```bash
 git clone https://github.com/singhsrijan46/Vault.git
-cd PeerVault
+cd Vault
 make build
 ```
 
@@ -102,7 +102,7 @@ make build
 ### Environment Variables
 
 ```bash
-export PEERVAULT_KEY='your-32-byte-secure-encryption-key-here'
+export VAULT_KEY='your-32-byte-secure-encryption-key-here'
 ```
 
 ### Command-Line Flags
@@ -382,8 +382,8 @@ sequenceDiagram
 ## Project Structure
 
 ```
-PeerVault/
-├── cmd/peervault/          # CLI application
+Vault/
+├── cmd/vault/          # CLI application
 ├── internal/               # Private packages
 │   ├── crypto/            # AES-256 encryption
 │   ├── metrics/           # Metrics collection
